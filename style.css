@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+/* header & navnar*/
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 70px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: grey;
+}
+
+#navbar li a:hover{
+    color: white;
+}
+
+#navbar li a.active{
+    color: white;
+}
+
+/* #1 Movie Poster*/
+
+#black{
+    background-image: url("images/home/black.jpeg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#black h1{
+    color: white;
+    padding-top: 110px;
+    font-weight: 200px;
+    font-size: 80px;
+}
+
+#black h2{
+    color: white;
+    padding-bottom: 20px;
+}
+
+#black h4{
+    color: white;
+}
+
+#black p{
+    color: white;
+    font-size: 15px;
+    padding-top: 15px;
+}
+
+#rate{
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+#btn{
+    background-color: white;
+    height: 40px;
+    width: 100px;
+    border: 0px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+/* trending movies*/
+
+#trending h1{
+    padding-top: 50px;
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 50px;
+    
+}
+
+#trendmovies img{
+    height: 400px;
+}
+
+.trendm1{
+    padding: 0 55px;
+}
+
+#trendmovies .trend{
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+.trend h4{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#trendmovies{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* trending events */
+
+#trendingevents h1{
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 50px;
+   
+}
+
+#trendevents img{
+    height: 400px;
+}
+
+.trende1{
+    padding: 0 55px;
+}
+
+#trendevents .trende{
+    text-align: center;
+    font-size: 20px;
+   
+}
+
+.trende h4{
+    padding-top: 10px;
+}
+
+#trendevents{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* banner */
+
+.banner1{
+    margin: 100px 0;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("images/home/banner.jpg");
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+}
+
+#banner h2{
+    color: white;
+    font-size: 40px;
+}
+
+#banner h6{
+    color: white;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+/* movie banners */
+
+.bannerc2{
+    padding: 0 55px;
+}
+
+#banner2{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+#banner2 .bannerbox{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    text-align: left;
+    background-image: url("images/home/lightyear.jpg");
+    min-width: 660px;
+    height: 50vh;
+    background-size: cover;
+    padding: 30px;
+}
+
+#banner2 h2{
+    color: white;
+    font-size: 45px;
+    line-height: 50px;
+}
+
+#banner2 .bannerbox2{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    text-align: left;
+    background-image: url("images/home/moonfall.jpg");
+    min-width: 660px;
+    height: 50vh;
+    background-size: cover;
+    padding: 30px;
+}
+
+/* footer */
+
+footer{
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    height: 30vh;
+    text-align: center;
+    align-content: center;
+    padding-left: 450px;
+}
+
+.column1 img{
+    width: 200px;
+    height: 80px;
+}
+
+.column1 h3{
+    margin-top: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+}
+.column1 p{
+    margin-top: 20px;
+    color: white;
+}
+
+
+/* movies page 
+   banner 1
+*/
+
+#m-banner{
+    background-image: url(images/movie/godzilla.jpg);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    justify-content: center;
+}
+
+#m-banner h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    padding-left: 50px;
+    padding-top: 180px;
+}
+
+#m-banner h2{
+    font-size: 60px;
+    color: white;
+    font-weight: 200;
+    padding-left: 50px;
+}
+
+/*
+banner2
+*/
+
+#m-banner2 .banner2{
+    background-image: url(images/movie/cyber.jpg);
+    height: 45vh;
+    background-size: cover;
+    justify-content: center;
+    text-align: end;
+    margin-top: 50px;
+}
+
+#m-banner2 h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    padding-right: 50px;
+    padding-top: 160px;
+}
+
+#m-banner2 h2{
+    font-size: 50px;
+    font-weight: 200;
+    color: white;
+    padding-right: 50px;
+}
+
+#trendmovies a{
+    color: black;
+    text-decoration: none;
+}
+
+#trendmovies a:hover{
+    color: red;
+}
+
+/* events page 
+   banner 1
+*/
+
+#e-banner{
+    background-image: url(images/events/marsh.jpg);
+    width: 100;
+    height: 50vh;
+    background-size: cover;
+    justify-content: center;
+}
+
+#e-banner h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    padding-left: 50px;
+    padding-top: 180px;
+}
+
+#e-banner h2{
+    font-size: 60px;
+    color: white;
+    font-weight: 200;
+    padding-left: 50px;
+}
+
+#e-banner2 .banner2{
+    background-image: url(images/events/weeknd.jpg);
+    height: 45vh;
+    background-size: cover;
+    justify-content: center;
+    text-align: end;
+    margin-top: 50px;
+}
+
+#e-banner2 h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    padding-right: 50px;
+    padding-top: 160px;
+}
+
+#e-banner2 h2{
+    font-size: 50px;
+    font-weight: 200;
+    color: white;
+    padding-right: 50px;
+}
+
+/* sonic 2 page*/
+#sonic{
+    background-image: url("images/moviepage/sonicpage.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#sonic h1{
+    color: white;
+    padding-top: 400px;
+    font-weight: 200px;
+    font-size: 60px;
+}
+
+#sonic h4{
+    color: white;
+}
+
+#sonic p{
+    color: white;
+    font-size: 15px;
+    padding-top: 15px;
+}
+
+#bookyourticket{
+    font-size: 30px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+
+#details{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#details h3{
+    padding-bottom: 20px;
+}
+
+/* black adam */
+
+#adam{
+    background-image: url("images/moviepage/adam.jpeg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#adam h1{
+    color: white;
+    padding-top: 350px;
+    font-weight: 200px;
+    font-size: 60px;
+}
+
+#adam h4{
+    color: white;
+}
+
+#adam p{
+    color: white;
+    font-size: 15px;
+    padding-top: 15px;
+}
+
+/* light year */
+
+#light{
+    background-image: url("images/moviepage/light.jpeg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#light h1{
+    color: white;
+    padding-top: 350px;
+    font-weight: 200px;
+    font-size: 60px;
+}
+
+#light h4{
+    color: white;
+}
+
+#light p{
+    color: white;
+    font-size: 15px;
+    padding-top: 15px;
+}
+
+/* james */
+#james{
+    background-image: url("images/moviepage/james.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#james h1{
+    color: white;
+    padding-top: 350px;
+    font-weight: 200px;
+    font-size: 60px;
+}
+
+#james h4{
+    color: white;
+}
+
+#james p{
+    color: white;
+    font-size: 15px;
+    padding-top: 15px;
+}
+
+/* vikram */
+
+#vikram{
+    background-image: url("images/moviepage/vikram.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#vikram h1{
+    color: white;
+    padding-top: 350px;
+    font-weight: 200px;
+    font-size: 60px;
+}
+
+#vikram h4{
+    color: white;
+}
+
+#vikram p{
+    color: white;
+    font-size: 15px;
+    padding-top: 15px;
+}

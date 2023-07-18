@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traverse</title>
+    <link rel="icon" type="image/x-icon" href="images/logo/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="images/logo/logo.png" class="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="movies.html">Movies</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="adam">
+        <h1>Black Adam</h1>
+        <h4>Action &nbsp; &nbsp; Fantasy &nbsp; &nbsp; Adventure</h4>
+        <h4>2h 2m &nbsp; &nbsp; PG</h4>
+        <p>Nearly 5,000 years after he was bestowed with the almighty powers of the<br>Egyptian gods and imprisoned just as quickly - Black Adam is freed from his<br>earthly tomb, ready to unleash his unique form of justice on the modern<br>world.</p>
+    </section>
+    <section id="bookyourticket">
+        <h1>Book Your Tickets</h1>
+    </section>
+    <section id="details">
+        <h3>Please Fill Up The Details</h3>
+                <label>Name &emsp;</label><input id="name" type="text">
+                <label>&emsp;&emsp;Mob No&emsp;&emsp;</label><input id="mob" type="number">
+                <label>&emsp;&emsp;Email&emsp; &emsp; &emsp;</label><input id="email" type="text">
+                <label>&emsp;&emsp;Movie Name </label><input id="movie" type="text">
+                <label>&emsp;&emsp;Theater </label><input id="theater" type="text"><br><br>
+                <label>Seat No </label><input id="seat" type="text">
+                <label>&emsp;&emsp;Ticket Price </label><input id="price" type="number">
+                <label>&emsp;&emsp;Date & Time </label><input id="date_time" type="text">
+                <br><br>
+                <button id="Insbtn">Book Ticket</button>&emsp;
+                <button id="Delbtn">Delete Ticket</button>
+
+                <script type="module">
+                    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+
+                    const firebaseConfig = {
+                  apiKey: "AIzaSyDkpvO3607by_Q7Vv7l6ZdglfDrQ6obZTU",
+                  authDomain: "testdb-ed707.firebaseapp.com",
+                  databaseURL: "https://testdb-ed707-default-rtdb.firebaseio.com",
+                  projectId: "testdb-ed707",
+                  storageBucket: "testdb-ed707.appspot.com",
+                  messagingSenderId: "966494035669",
+                  appId: "1:966494035669:web:41febbdcd20372f3b50c5c"
+                };
+                
+                    const app = initializeApp(firebaseConfig);
+                    import { getFirestore, doc, setDoc, addDoc, deleteDoc, getDoc, collection } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+                
+                    const db = getFirestore();
+                    let name = document.getElementById("name");
+                    let mob = document.getElementById("mob");
+                    let email = document.getElementById("email");
+                    let movie = document.getElementById("movie");
+                    let theater = document.getElementById("theater");
+                    let seat = document.getElementById("seat");
+                    let price = document.getElementById("price");
+                    let date_time = document.getElementById("date_time");
+                    let Insbtn = document.getElementById("Insbtn");
+                    let Delbtn = document.getElementById("Delbtn");
+                    async function AddDocument_CustomID() {
+                        var ref = doc(db, "Movies", document.getElementById("mob").value);
+                        await setDoc(
+                            ref, {
+                            Name: document.getElementById("name").value,
+                            Mobile_No: document.getElementById("mob").value,
+                            Email: document.getElementById("email").value,
+                            Movie: document.getElementById("movie").value,
+                            Theater: document.getElementById("theater").value,
+                            Seat_No: document.getElementById("seat").value,
+                            Ticket_Price: document.getElementById("price").value,
+                            Date_Time: document.getElementById("date_time").value,
+                        }
+                        )
+                
+                            .then(() => {
+                
+                                alert("Ticket Booked Successfully");
+                
+                            }
+                            )
+                            .catch((error) => {
+                                alert("Something Went Wrong:" + error);
+                            });
+                
+                    }
+
+                    async function deleteAdoc() {
+                        var ref = doc(db, "Movies", document.getElementById("mob").value);
+                        const docSnap = await getDoc(ref);
+                        if (!docSnap.exists()) {
+                            alert("No Record Avaiable");
+                            return;
+                
+                
+                        }
+                        await deleteDoc(ref)
+                            .then(() => {
+                                alert("Ticket Deleted Successfully");
+                
+                            }).catch((error) => {
+                                alert("Something Went Wrong:", +error);
+                
+                            });
+                    }
+                    Insbtn.addEventListener("click", AddDocument_CustomID);
+                    Delbtn.addEventListener("click", deleteAdoc);
+                
+                
+                </script>
+    </section>
+    <footer>
+        <div class="column1">
+            <img src="images/logo/traverse.png">
+            <h3>Always To Give You The Best Screenplay</h3>
+            <p>© Traverse. &nbsp;All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
